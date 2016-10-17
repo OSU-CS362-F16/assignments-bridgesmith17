@@ -1,0 +1,15 @@
+findInteger
+	This method doesn’t give the correct answer if the first occurrence or only occurrence  of the integer that is being searched is the first element in the array (position 0).  No exceptions are thrown by this function. 
+
+lastZero
+	This  method gives the incorrect answer if the only 0 in the array is at index 0.  No exceptions are thrown. 
+
+last
+	This method gives the incorrect answer if the number isn’t in the first index because the counter goes in the wrong direction. After one loop the index I is out of bound. It throws an ArrayIndexOutOfBoundsException because i becomes negative. 
+
+positive 
+	This method gives correct input for all tests no exceptions are thrown.
+
+oddOrPos
+	This method gets the incorrect value if the odd numbers are negative because arr[i] % 2 would equal -1. No exceptions are thrown. 
+

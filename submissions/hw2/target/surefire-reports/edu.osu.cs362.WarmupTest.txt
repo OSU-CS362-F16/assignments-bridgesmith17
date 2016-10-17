@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: edu.osu.cs362.WarmupTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 0.034 sec <<< FAILURE! - in edu.osu.cs362.WarmupTest
+testOddOrPos(edu.osu.cs362.WarmupTest)  Time elapsed: 0.008 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<5> but was:<0>
+	at edu.osu.cs362.WarmupTest.testOddOrPos(WarmupTest.java:87)
+
+testLast(edu.osu.cs362.WarmupTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at edu.osu.cs362.WarmupTest.testLast(WarmupTest.java:51)
+
+testLastZero(edu.osu.cs362.WarmupTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<-1>
+	at edu.osu.cs362.WarmupTest.testLastZero(WarmupTest.java:37)
+
+testFindInteger(edu.osu.cs362.WarmupTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<1>
+	at edu.osu.cs362.WarmupTest.testFindInteger(WarmupTest.java:25)
+
