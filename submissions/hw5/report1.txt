@@ -1,0 +1,79 @@
+
+verse Bug Reporting Template
+==============================
+
+Title: Deal Cards to Player  Bug
+
+Class:
+e.g. "Serious Bug"
+
+Date: 10/30/16       
+Reported By:   Bridgette Smith
+Email:      smitbrid@oregonstate.edu
+
+
+Product:     Simple Black Jack Game         Version: pulled from git 10.29.16
+
+Is it reproducible: Yes 
+
+Description
+===========
+Dealer doesn’t deal correct number of cards to player.
+
+
+Steps to Produce/Reproduce
+--------------------------
+
+call the play round method
+
+Expected Results
+----------------
+
+After the play round method is called the number of cards a player will have will be equal to # of hits or (1) for double plus  two. Each player should be  dealt two cards initially before given the option to hit, double or stand per the rules.
+
+
+Actual Results
+--------------
+Hit is called 7 times. But a card is dealt to the player on 8 times instead of 9
+
+
+Workarounds
+-----------
+None. Bug will occur at every call to playRound.
+
+
+Attachments
+-----------
+
+attachment1.jpeg
+
+
+
+
+Other Information					
+-----------------
+Detailed description of Issue: When the playRound function is called each player is initially dealt one card instead of two.
+
+How Issue Affect functionality of game: The game doesn’t function properly because each player doesn’t have the correct number of cards.
+
+Snippet of test case that fails: 
+snippet1.jpeg
+
+Justification why that test case should pass. 
+The test should pass so that the player has the right number of cards he/she is expecting to receive. 
+
+Change Description
+--------
+
+Will deal another card at the beginning of the round before user is prompted to hit, stand or double.
+
+
+Change
+---------
+for(PlayerAction p: players ){
+		dealer.dealCard(dealer);
+		
+		dealer.dealCard(p);
+		//for second card
+		dealer.dealCard(p);
+		}

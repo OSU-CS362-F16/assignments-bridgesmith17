@@ -1,0 +1,101 @@
+
+verse Bug Reporting Template
+==============================
+
+Title: Double Down Bug
+
+Class:
+e.g. "Feature Request”
+
+Date: 10/30/16       
+Reported By:   Bridgette Smith
+Email: smitbrid@oregonstate.edu  
+
+
+Product:     Simple Black Jack Game         Version: pulled from git 10.29.16
+
+Is it reproducible: Yes 
+
+Description
+===========
+
+Double down should only be allowed prior to HIT being called and immediately end the round. Double Down is able to be called after a hit 
+
+Steps to Produce/Reproduce
+--------------------------
+
+Call Hit then Call DoubleDown. 
+
+
+Expected Results
+----------------
+Player should not be allowed to do this. An error message should be displayed. 
+
+
+Actual Results
+--------------
+
+program completes the double down. 
+
+
+Workarounds
+-----------
+
+No work arounds but if the user doesn’t try to do this then the bug wont present itself. 
+
+Attachments
+-----------
+Attachment3.jpeg
+
+
+Other Information
+
+
+Detailed description of Issue: Double down grants player the opportunity to make a lot of money . Its not fair if the user already has several cards and a better gage of  how the game is going to go. 
+
+How Issue Affect functionality of game: Game still functions but double down aspect is broken if the user tries to do it outside of the rules. 
+
+Snippet of test case that fails:
+
+Snippet3.jpeg
+
+Justification why that test case should pass. : It should pass to enforce the rules of black jack . 
+
+Change Description
+----------------
+Added a nested switch statement for playRound that checks if double is being called for the players frist turn. 
+
+
+Change
+--------------------
+
+		for(PlayerAction p: players ){
+			boolean turnOver = false;
+			int turn = 1;
+			while(!turnOver){
+				PlayerAction.ActionType a = p.getAction();	
+	
+				switch(a){
+					case HIT:
+						dealer.dealCard(p);		
+						turn = 2;
+						break;
+					case DOUBLE:
+						switch(turn){
+							case 1:
+		
+								p.doubleDownBet();
+								dealer.dealCard(p);
+								turnOver = true;
+								break;
+							default:
+								turn = 2;
+								break;
+								}	
+				default: // stand
+						turnOver = true;
+						break;
+				}
+		
+			}
+		}

@@ -1,0 +1,73 @@
+
+verse Bug Reporting Template
+==============================
+
+Title: Deal Cards to Dealer Bug
+
+Class:"Serious Bug"
+
+Date: 10/30/16       
+Reported By:   Bridgette Smith
+Email: smitbrid@oregonstate.edu      
+
+
+Product:     Simple Black Jack Game         Version: pulled from git 10.29.16
+
+Is it reproducible: Yes 
+
+Description
+===========
+The dealer doesn’t receive the right of amount of cards. 
+
+
+Steps to Produce/Reproduce
+--------------------------
+
+Any call to playRound will produce this error. Also there is a second error because it isn’t checked if the dealer hand is above 17. More cards are supposed to be added to the dealer hand until it at least equals 17.
+
+Expected Results
+----------------
+
+Dealer should have two or more cards. 
+
+Actual Results
+--------------
+Dealer has one card 
+
+
+Workarounds
+-----------
+none.
+
+
+Attachments
+-----------
+
+Attachment2.jpeg
+
+
+
+Other Information
+------------------
+
+Detailed description of Issue: Call to play round always has the dealer as having one card. In a game of black jack the dealer will have atleast 2 cards and maybe more until the dealer has reach a hand score of 17.. 
+
+How Issue Affect functionality of game: Since the dealer only has one card it puts the player at an advantage for winning.
+
+Snippet of test case that fails:
+Snippet2.jpeg
+
+Justification why that test case should pass: Dealer should have the opportunity for more than one card to make the game fair. 
+
+Change Description
+----------
+Deals two cards to dealer at the beginning per blackjack guide lines
+
+Change
+---------
+		for(PlayerAction p: players ){
+			dealer.dealCard(dealer);
+			//deals second card to dealer
+			dealer.dealCard(dealer);
+			dealer.dealCard(p);
+		}
