@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.util.Random;
 import static org.mockito.Mockito.*;
 
-public class MockExample {
+public class MockExampleTest {
     @Test
     public void testMock(){
 	// Does it run without errors for a simple case?
