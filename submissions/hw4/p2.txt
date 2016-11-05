@@ -1,0 +1,5 @@
+1 I  picked the ‘if(dealerScore<handScore(p.getHand())) function in the Dealer class. The one inidicates the test passed for this if statement when the statement is true but not for the alternatives. It is highlighted in red to indicate that there isn’t total branch coverage. 
+2	Java Interfaces show up as N/A because Cobertura cannot find line number information when the class was not compiled with “debug=true”.
+3	Disadvantages would be not being able to test the functionality of a switch statement all at one. We might miss something that was not tested in the switch. 
+4	Each if/else adds additional branches that need to be covered since each possibility is its own branch of code that needs to be covered. 
+

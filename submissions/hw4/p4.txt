@@ -1,0 +1,9 @@
+Parrt 4. 
+1	True
+2	False
+3	False other all lines could have been tested but not all variations of the branches could have been tested.
+4	False all branch statements could have been tested but not all lines of code have been tested for errors. 
+5	False there could have been additional paths that have not yet been tested that are a combination of the different branches. 
+6	Originally I thought if I went through my code line by line for errors that I would be able to pick up easily on the errors that existed in my code. I didn’t think to check to ensure that each option for loops or if/else statements were error free. A different branch in my code can result in an expected error in another location of my code. It is important to check to see if changes in branch will affect the overall run of the program. 
+7	A test suite using only input domain partitioning may generate a lot of redundant tests . It doesn’t look to generate tests that will show different results. Coverage is a lot less in  a test suite only using input domain partitioining . 
+
